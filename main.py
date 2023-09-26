@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def mainWork():
-    username = ""
-    password = ""
+    username = "kamran@relanto.ai"
+    password = "Gmailpass@11"
     
     auth_url = 'https://auth.anaplan.com/token/authenticate'
     auth_json = requests.post(
