@@ -122,10 +122,10 @@ def mainWork():
                                     }
                                 )
                                 print("Prediction Started")
-                                df = pandas.read_csv(StringIO(getChunk.text), sep=",")
+                                '''df = pandas.read_csv(StringIO(getChunk.text), sep=",")
                                 #print(df)
                                 df=df[0:51]
-                                df['Time'] = pd.to_datetime(df['Time'], format='%b %y')
+                                df['Time'] = pand.to_datetime(df['Time'], format='%b %y')
                                 df = df.rename(columns={'Time': 'ds', 'Sales': 'y'})
                                 df['Predict'] = 0
                                 m = Prophet()
@@ -141,7 +141,7 @@ def mainWork():
                                 predictions['Sales']=predictions['Sales'].fillna(0)
 
                                 predictions.set_index('Time',inplace=True)
-                                
+                                '''
                                 data_Frame = pandas.read_csv(StringIO(getChunk.text), sep=",")
                                 print(data_Frame)
                                 data_Frame['Time'] = pandas.to_datetime(data_Frame['Time'], format='%b %y')
